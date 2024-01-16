@@ -1,0 +1,11 @@
+{
+  "name": "frontend_architecture",
+  "version": "1.0.0",
+  "description": "creating a flexible front-end architecture",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev:vue3": "cd vue3-app && npm run dev"
+  },
+  "author": "deokyeong93",
+  "license": "ISC"
+}
