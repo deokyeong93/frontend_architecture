@@ -10,6 +10,8 @@
   "author": "deokyeong93",
   "license": "ISC",
   "dependencies": {
-    "dayjs": "^1.11.10"
+    "axios": "^1.6.5",
+    "dayjs": "^1.11.10",
+    "moment": "^2.30.1"
   }
 }
