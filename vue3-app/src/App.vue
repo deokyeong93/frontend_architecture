@@ -20,8 +20,8 @@ import { TO_DO_PLACEHOLDER } from '../../core/constant/index'
         />
         <button class="btn">Add</button>
       </div>
-      <ul class="scroll">
-        <li id="todoList"></li>
+      <ul class="to-do-items">
+        <li id="to-do-item"></li>
       </ul>
       <div>
         <hr class="counter" />
