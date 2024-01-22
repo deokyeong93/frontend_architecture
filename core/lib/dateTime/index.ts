@@ -1,15 +1,15 @@
 import { DayjsAdapter } from "./adapter/dayjs";
 import { DateAdapterImpl } from "./types/dateTime";
 
-class DateClient {
+class DateClient implements DateAdapterImpl {
   private adapter: DateAdapterImpl;
 
   constructor(adapter: DateAdapterImpl) {
     this.adapter = adapter;
   }
 
-  getCurrentDate(): string {
-    return this.adapter.getCurrentDate();
+  getCurrentDate(format: string) {
+    return this.adapter.getCurrentDate(format);
   }
 }
 

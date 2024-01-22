@@ -1,3 +1,3 @@
 export interface DateAdapterImpl {
-  getCurrentDate(): string;
+  getCurrentDate(format: string): string;
 }
