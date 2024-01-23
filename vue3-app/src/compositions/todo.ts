@@ -1,13 +1,7 @@
 import { reactive } from 'vue';
 import { readUserToDos } from '../../../core/service/apis/todo';
 import { HANDLE_TO_DO_TYPE } from '../../../core/constant';
-
-type ToDo = {
-  userId: number, 
-  id: number, 
-  title: string, 
-  completed: boolean
-}
+import { ToDoController, type ToDo } from '../../../core/service/domains/todo';
 
 type State = {
   todos: ToDo[]
@@ -31,42 +25,30 @@ export const useToDo = (userId: number) => {
   }
 )    
 
-  const handleToDos = (options: HandleToDosOption) => {
+  const handleToDos = (options: HandleToDosOption) => {    
+    const controller = new ToDoController(state.todos)
+    
     if(options.type === HANDLE_TO_DO_TYPE.ADD) {
-      state.todos.push({
-        id: state.todos.length + 1,
+      state.todos = controller.addToDo({
         userId,
         title: options.title,
-        completed: false
       })
 
       return
     }
 
-    if(options.type === HANDLE_TO_DO_TYPE.INIT) {
-      state.todos.splice(0, state.todos.length)
+    if(options.type === HANDLE_TO_DO_TYPE.CHECK) {
+      state.todos = controller.checkToDo({id: options.id})
 
       return
     }
 
-    if(options.type === HANDLE_TO_DO_TYPE.CHECK) {
-      const targetIndex = state.todos.findIndex(todo => todo.id === options.id)
-      
-      if(targetIndex > -1) {
-        state.todos.splice(
-          targetIndex, 
-          1, 
-          {
-            ...state.todos[targetIndex], 
-            completed: !state.todos[targetIndex].completed
-          }
-        )
-      }
+    if(options.type === HANDLE_TO_DO_TYPE.INIT) {
+      state.todos = controller.initToDo()
     }
   }
 
   const fetchReadUserTodos = async () => {
-    
     try {
       state.loading.fetchReadUserTodos = true
 
