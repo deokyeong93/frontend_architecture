@@ -32,6 +32,6 @@ const itemTextClasses = computed(() => ({
 </template>
 
 <style scoped>
-@import "../../../core/styles/toDoList.css";
+@import "../../../core/styles/toDoItem.css";
 
 </style>

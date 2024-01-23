@@ -1,7 +1,8 @@
-import "../../../../core/styles/toDoList.css"
+import "../../../../core/styles/toDoItem.css"
 
 import { HANDLE_TO_DO_TYPE } from "../../../../core/constant"
 import { HandleToDosOption } from "../_hooks/todo"
+import { useMemo } from "react"
 
 interface ToDoItemProps {
   handleCheckbox: (options: HandleToDosOption) => void
@@ -11,6 +12,16 @@ interface ToDoItemProps {
 }
 
 export default function ToDoItem(props: ToDoItemProps) {
+  const itemTextClasses = useMemo(() => {
+    return Object.entries({
+      "item-text": true,
+      "checked-item-text": props.completed,
+    })
+      .filter(([className, isUse]) => isUse, "")
+      .map(([className, isUse]) => className)
+      .join(" ")
+  }, [props.completed])
+
   return (
     <li
       className="todo-item"
@@ -18,8 +29,13 @@ export default function ToDoItem(props: ToDoItemProps) {
         props.handleCheckbox({ type: HANDLE_TO_DO_TYPE.CHECK, id: props.id })
       }
     >
-      <input type="checkbox" className="todo-input" defaultChecked={props.completed} />
-      <p className="itemTextClasses">{props.title}</p>
+      <input
+        readOnly
+        type="checkbox"
+        className="todo-input"
+        checked={props.completed}
+      />
+      <p className={itemTextClasses}>{props.title}</p>
     </li>
   )
 }
