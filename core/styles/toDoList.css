@@ -1,0 +1,44 @@
+.todo-item {
+  display: flex;
+  gap: 1rem;
+}
+
+input.todo-input[type="checkbox"] {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  cursor: pointer;
+}
+
+input.todo-input[type="checkbox"]::before {
+  content: "\2713";
+  display: inline-block;
+  width: 36px;
+  height: 36px;
+  line-height: 36px;
+  font-size: 1.7rem;
+  text-align: center;
+  border: 0.06rem solid var(--grey-border);
+  border-radius: 50%;
+  color: transparent;
+}
+
+input.todo-input[type="checkbox"]:checked::before {
+  color: var(--white);
+  background-color: var(--indigo);
+  border: 0.06rem solid var(--indigo);
+  border-radius: 50%;
+}
+
+.item-text {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.checked-item-text {
+  color: #8f98a8;
+  display: flex;
+  text-decoration: line-through;
+}
+

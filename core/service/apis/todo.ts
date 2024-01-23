@@ -1,9 +1,9 @@
 import { http } from '../../../core/lib/http'
 import { BASE_URL } from '../../constant'
 
-export const readToDo = async (postId: number) => {
+export const readUserToDos = async (userId: number) => {
   try {
-    const result = await http.get(`${BASE_URL}/todos`)
+    const result = await http.get(`${BASE_URL}/users/${userId}/todos`)
 
     return result
   } catch(error) {

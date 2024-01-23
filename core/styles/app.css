@@ -15,8 +15,8 @@
   border-radius: 2rem;
   background: var(--white);
   padding: 3rem;
-  height: 50%;
-  width: 60%;
+  height: 510px;
+  width: 480px;
   box-shadow: 0 1rem 3rem 1rem rgba(0, 23, 71, 0.15);
   max-width: 30rem;
 }
@@ -35,7 +35,7 @@
   font-size: 36px;
 }
 
-.btn {
+.input-btn {
   color: var(--white);
   font-size: 1.1rem;
   padding: 0.7rem 1.5rem;
@@ -47,6 +47,9 @@
   bottom: 0.5rem;
 }
 
+.input-btn:disabled {
+  background-color: var(--grey-border);
+}
 
 h2 {
   text-transform: uppercase;
@@ -55,7 +58,7 @@ h2 {
   text-align: center;
 }
 
-.input {
+.input-form {
   position: relative;
   display: flex;
 }
@@ -77,28 +80,29 @@ input[type="text"]::placeholder {
   gap: 1rem;
 }
 
-.to-do-items {
+.todo-items {
+  height: 15rem;
+  scrollbar-width: thin;
+  margin: 16px 0;
   padding: 0;
-  margin: 0;
   overflow-y: scroll;
 }
 
-.to-do-items {
-  height: 15rem;
-  scrollbar-width: thin;
-}
-
-.to-do-items::-webkit-scrollbar {
+.todo-items::-webkit-scrollbar {
   width: 0.6rem;
 }
 
-.to-do-items::-webkit-scrollbar-thumb {
+.todo-items::-webkit-scrollbar-thumb {
   background-color: var(--blue);
   border-radius: 0.5rem;
 }
 
-.to-do-items::-webkit-scrollbar-track {
+.todo-items::-webkit-scrollbar-track {
   display: none;
+}
+
+.todo-item-wrapper {
+  padding: 4px 0px;
 }
 
 .counter {

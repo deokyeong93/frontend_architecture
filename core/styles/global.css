@@ -1,26 +1,21 @@
 :root {
   --gradient: linear-gradient(
-    180deg,
-    rgba(45, 112, 1253, 0.73) 0%,
-    #163e92 100%
+    0deg, 
+    rgba(9,34,121,1) 0%, 
+    rgba(255,255,255,1) 0%, 
+    rgba(0,99,255,1) 51%
   );
   --dark: #001747;
   --grey: #b1bacb;
   --grey-border: rgba(210, 210, 210, 0.75);
   --grey-light: #eeeeee;
   --grey-dark: $405175;
-  --blue: #2d70fd;
-  --green: #00d8a7;
+  --blue: #0862fb;
+  --indigo: #3768ff;
   --white: #ffffff;
 }
 
-body,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p {
+* {
   margin: 0;
+  padding: 0;
 }
