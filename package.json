@@ -1,0 +1,17 @@
+{
+  "name": "frontend_architecture",
+  "version": "1.0.0",
+  "description": "creating a flexible front-end architecture",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev:vue3": "cd vue3-app && npm run dev",
+    "build:vue3": "cd vue3-app && npm run build"
+  },
+  "author": "deokyeong93",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.6.5",
+    "dayjs": "^1.11.10",
+    "moment": "^2.30.1"
+  }
+}

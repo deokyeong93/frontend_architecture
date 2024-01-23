@@ -1,0 +1,21 @@
+:root {
+  --gradient: linear-gradient(
+    0deg, 
+    rgba(9,34,121,1) 0%, 
+    rgba(255,255,255,1) 0%, 
+    rgba(0,99,255,1) 51%
+  );
+  --dark: #001747;
+  --grey: #b1bacb;
+  --grey-border: rgba(210, 210, 210, 0.75);
+  --grey-light: #eeeeee;
+  --grey-dark: $405175;
+  --blue: #0862fb;
+  --indigo: #3768ff;
+  --white: #ffffff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
