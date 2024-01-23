@@ -27,10 +27,6 @@
   justify-content: center;
 }
 
-.todo-header > img {
-  width: 80px;
-}
-
 .todo-header > h2 {
   font-size: 36px;
 }
@@ -105,15 +101,13 @@ input[type="text"]::placeholder {
   padding: 4px 0px;
 }
 
-.counter {
-  border: 0.06rem solid var(--grey-light);
-}
-
 .counter-container {
   height: 2rem;
   display: flex;
   justify-content: space-between;
   color: var(--grey);
+  border-top: 0.06rem solid var(--grey-light);
+  padding-top: 8px;
 }
 
 .counter-container p {

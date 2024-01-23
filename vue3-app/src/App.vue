@@ -28,7 +28,7 @@
   <section class="container">
     <div class="todo-wrapper">
       <div class="todo-header">
-        <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />
+        <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="80" height="125" />
         <h2>To-do list</h2>
       </div>
       <form 
@@ -68,7 +68,6 @@
         </div>
       </ul>
       <div>
-        <hr class="counter" />
         <div class="counter-container">
           <p>
             <span>{{ checkedCount }}</span>
