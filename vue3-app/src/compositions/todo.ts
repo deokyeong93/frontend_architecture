@@ -1,7 +1,7 @@
 import { reactive } from 'vue';
 import { readUserToDos } from '../../../core/service/apis/todo';
 import { HANDLE_TO_DO_TYPE } from '../../../core/constant';
-import { ToDoController, type ToDo } from '../../../core/service/domains/todo';
+import { ToDoController, type ToDo } from '../../../core/service/controller/todo';
 
 type State = {
   todos: ToDo[]

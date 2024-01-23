@@ -1,5 +1,8 @@
 .todo-item {
+  --line-height: 36px;
+  
   display: flex;
+  line-height: var(--line-height);
   gap: 1rem;
 }
 
@@ -15,7 +18,7 @@ input.todo-input[type="checkbox"]::before {
   display: inline-block;
   width: 36px;
   height: 36px;
-  line-height: 36px;
+  line-height: var(--line-height);
   font-size: 1.7rem;
   text-align: center;
   border: 0.06rem solid var(--grey-border);
