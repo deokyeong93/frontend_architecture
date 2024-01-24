@@ -5,6 +5,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev:vue3": "cd vue3-app && npm run dev",
+    "dev:vue2": "cd vue2-app && npm run serve",
     "dev:react": "cd react-app && npm run dev",
     "build:vue3": "cd vue3-app && npm run build"
   },
